@@ -1,0 +1,17 @@
+@import "reset";
+@import "posts";
+@import "new";
+
+@font-face {
+  font-family: "GenJyuuGothic-Monospace-Heavy.ttf";
+  src: url('assets/GenJyuuGothic-Monospace-Heavy.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  font-family: "GenJyuuGothic-Monospace-Heavy.ttf";
+}
+h1{
+  color:gray;
+  font-family: "hoge";
+}

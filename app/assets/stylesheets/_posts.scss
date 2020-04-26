@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  width: 90%;
+  height: 1100px;
+  margin: auto;
+  .header {
+    overflow: hidden;
+    position: relative;  
+    &__logo {
+      background-color: #ff8c00;
+      width: 100%;
+      height: 100px;
+      border-bottom:20px solid #ffa500;
+      p.header__logo__name {
+      font-size:48px;
+      line-height: 100px;
+      text-align: center;
+      font-family: "GenJyuuGothic-Monospace-Heavy.ttf";
+      }
+    }
+    &__image {
+      width: 100%;
+      height: 400px;
+      display: block;
+      opacity : 0;
+      transform: translateY(20px);
+      transition: all 1s;
+      // position: absolute;
+      // display: none;
+    }
+  }
+    .heder__nav {
+      height: 100%;
+      .menu {
+        list-style: none;
+        &__list {
+          background-color: rgb(163, 56, 56);
+          color: #FFF;
+          float: left;
+          font-size: 20px;
+          padding: 2% 1%;
+          text-align: center;
+          width: 23%;
+          border-bottom: 2px dashed black;
+          border-top: 2px dashed black;
+        }
+      }
+    }
+  
+  .main-body {
+    height: 1100px;
+    width: 100%;
+    display: flex;
+    .side-list {
+      width: 20%;
+      height: 100%;
+      background-color: #ffa500;
+      position: relative;
+      &__menu { 
+        width: 100%;
+        height: 100%;
+        .side-info {
+          margin-top: 20px;
+        }
+        .title {
+          text-align: center;
+          padding-top: 20px;
+          margin-bottom: 10px;
+        }
+        &__show {
+          list-style: none;
+          text-align: center;
+          
+          &__page {
+            text-decoration: none;
+            color: rgba(236, 53, 62, 0.877);
+          }
+        }
+        .comments {
+          text-align: center;
+          .comment-page {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .main-contents {
+      width: calc(100% - 20%);
+      height: 100%;
+      background-color: yellow;
+      &__messages {
+        height: 80px;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        .main-message {
+          font-size: 40px;
+          text-align: center;
+        }
+      }
+      .ramen-group {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        &__list {
+          width: calc(100% /3);
+          overflow: hidden;
+          cursor: pointer;
+          .ramen-group__list__first {
+            display: block;
+            opacity : 0;
+            transform: translateY(20px);
+            transition: all 1s;
+          }
+          .info {
+            font-size: 12px;
+          }
+        }
+        &__list {
+          width: calc(100% /3);
+          &__second {
+          }
+          .info {
+            font-size: 12px;
+          }
+        }
+        &__list {
+          width: calc(100% /3);
+          &__third {
+          }
+          .info {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .ramen-group__two {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        &__list {
+          width: calc(100% /3);
+          ＆__first {
+
+          }
+        }
+        &__list {
+          width: calc(100% /3);
+          &__second {
+            
+          }
+        }
+        &__list {
+          width: calc(100% /3);
+          &__third {
+          }
+        }
+        .info {
+        }
+      }
+
+      .ramen-group__three {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        &__list {
+          width: 30%;
+          ＆__first {
+
+          }
+          .info {
+          
+          }
+        }
+        &__list {
+          width: 30%;
+          &__second {
+            
+          }
+          .info {
+          
+          }
+        }
+        &__list {
+          width: 30%;
+          &__third {
+          }
+          .info {
+          
+          }
+        }
+
+      }
+
+
+
+    }
+  }
+  .footer {
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    background-color: #174a5c;
+    color: white;
+    text-align: center;
+    ul.footer-menu li {
+      display: inline;
+    }
+  }
+}
