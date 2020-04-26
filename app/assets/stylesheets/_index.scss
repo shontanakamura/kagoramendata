@@ -1,0 +1,45 @@
+.header-index {
+  background-color: rgb(164, 230, 11);
+  width: 100%;
+  height: 80px;
+  .header-index {
+    text-align: center;
+    line-height: 80px;
+    font-size: 50px;
+  }
+}
+.content-index {
+  overflow: scroll;
+  width: 100%;
+  height: 600px;
+  background-image :url( "#{asset_path("back-image.jpg")}");
+  background-position: center;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  margin: o auto;
+  .content-list {
+    text-align: center;
+    .content__top {
+
+    }
+    .content__center {
+
+    }
+    .content__bottom {
+
+    }
+  }
+}
+
+.footer-index {
+  width: 100%;
+  height: 80px;
+  background-color: red;
+  }
+
+
+
+
+
+
+

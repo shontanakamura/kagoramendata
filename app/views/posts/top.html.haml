@@ -6,13 +6,13 @@
     = image_tag "ramen-top.jpg", alt: "", class: "header__image" 
     .heder__nav
       .menu
-        = link_to "#", class: "menu__list" do
+        = link_to "/", class: "menu__list" do
           HOME
-        = link_to "#", class: "menu__list" do
-          未定
+        = link_to "/posts", class: "menu__list" do
+          みんなの口コミ
         - if user_signed_in?
           .user_nav.grid-6
-            = link_to "ログアウト", "destroy_user_session_path", method: :delete, class: "menu__list"
+            = link_to "ログアウト", "/users/sign_out", method: :delete, class: "menu__list"
             = link_to  "投稿する", "/posts/new", class: "menu__list"
         - else
           .grid-6
