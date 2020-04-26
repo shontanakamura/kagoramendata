@@ -1,141 +1,20 @@
--# .body
--#   .header
--#     .header__logo
--#       %p.header__logo__name
--#         鹿児島ラーメン口コミアプリ　かごラー
--#     = image_tag "ramen-top.jpg", alt: "", class: "header__image"
--#     -# = image_tag "ramen-top.jpg", alt: "", class: "header__image"
--#     .heder__nav
--#       %ul.menu
--#         %li.menu__list
--#           HOME
--#         %li.menu__list
--#           口コミ
--#         %li.menu__list
--#           新規登録
--#         %li.menu__list
--#           ログアウト
--#   .main-body
--#     .side-list
--#       .side-list__menu
--#         .side-list__menu__show
--#           %p.side-info
--#             お知らせ
--#           %p.title
--#             鹿児島ラーメン王決定戦　
--#             %br
--#             過去大会一覧
--#           = link_to "http://archive.kts-tv.co.jp/event/ramen2014-Z/", class: "side-list__menu__show__page" do
--#             第１回 鹿児島ラーメン王決定戦
--#             %br
--#             %br
--#             %br
--#           = link_to "http://archive.kts-tv.co.jp/event/ramen2015/", class: "side-list__menu__show__page" do
--#             第２回 鹿児島ラーメン王決定戦
--#             %br
--#             %br
--#             %br
--#           = link_to "http://archive.kts-tv.co.jp/event/ramen2016/", class: "side-list__menu__show__page" do
--#             第３回 鹿児島ラーメン王決定戦
--#             %br
--#             %br
--#             %br
--#           = link_to  "http://archive.kts-tv.co.jp/event/ramen2017/", class: "side-list__menu__show__page" do
--#             第４回 鹿児島ラーメン王決定戦
--#             %br
--#             %br
--#             %br
--#           = link_to "http://archive.kts-tv.co.jp/event/ramen2018/", class: "side-list__menu__show__page" do
--#             第５回 鹿児島ラーメン王決定戦
--#             %br
--#             %br
--#             %br
--#           = link_to "http://archive.kts-tv.co.jp/event/ramen2016/", class: "side-list__menu__show__page" do
--#             鹿児島ラーメン王選手権
--#             %br
--#             公式ホームページ
--#             %br
--#             %br
--#             %br
--#             %br
--#         .comments
--#           %p みんなの口コミページ
--#           %br
--#           %p おすすめのお店やお気に入りの
--#           %br
--#           %p ラーメンを投稿してシェアしよう
--#           %br
--#           %br
--#           = link_to '/posts/new' , class: "comment-page" do
--#             かごラー投稿ページはこちら
-
-
-
--#     .main-contents
--#       .main-contents__messages
--#         %p.main-message
--#           鹿児島のお得なラーメン情報掲載中！！
--#       .ramen-group
--#         .rame-group__list
--#           = link_to image_tag("taketora.jpg", alt: "", class: "rame-group__list__first", width: "300", height: "250")
--#           %p.info
--#             TAKETORA
--#         .rame-group__list
--#           = link_to image_tag("goroya.jpg", alt: "", class: "rame-group__list__second", width: "300", height: "250"), root_path
--#           %p.info
--#             五郎家
--#         .rame-group__list
--#           = link_to image_tag("kokinta.jpg", alt: "", class: "rame-group__list_＿third", width: "300", height: "250"), root_path
--#           %p.info
--#             ラーメン小金太
-
--#       .ramen-group__two
--#         .rame-group__two__list
--#           = link_to image_tag("sakanoue.jpg", alt: "", class: "rame-group__two__list__first", width: "300", height: "250"), root_path
--#           %p.info
--#             サカノウエユニーク
--#         .rame-group__list
--#           = link_to image_tag("sannanbou.jpg", alt: "", class: "rame-group__two__list__second", width: "300", height: "250"), root_path
--#           %p.info
--#             鹿児島らーめん三男坊
--#         .rame-group__list
--#           = link_to image_tag("snooup.jpeg", alt: "", class: "rame-group__two__list_＿third", width: "300", height: "250"), root_path
--#           %p.info
--#             THE SNOOUP
-
--#       .ramen-group__three
--#         .rame-group__three__list
--#           = link_to image_tag("sobaru.jpg", alt: "", class: "rame-group__three__list__first", width: "300", height: "250"), root_path
--#           %p.info
--#             そばる
--#         .rame-group__three__list
--#           = link_to image_tag("zabon.jpg", alt: "", class: "rame-group__three__list__second", width: "300", height: "250"), root_path
--#           %p.info
--#             ざぼんラーメン
--#         .rame-group__three__list
--#           = link_to image_tag("juhatiban.jpg", alt: "", class: "rame-group__three__list_＿third", width: "300", height: "250"), root_path
--#           %p.info
--#             こだわりラーメン 十八番
-
--#   -# .contents.row
--#   -#   - @tweets.each do |tweet|
--#   -#     .content_post{:style => "background-image: url(#{tweet.image});"}
--#   -#       %p= tweet.text
--#   -#       %span.name
--#   -#         = tweet.name
-
-
-
--#   .footer
--#     %ul.footer-menu
--#       %li
--#         home 
--#       %li
--#         | about ｜
--#       %li
--#         service ｜
--#       %li
--#         Contact Us
--#       %P
--#         © All rights reserved by kagoramen.
-
+.header-index
+  .header-index
+    みんなの口コミ
+.content-index 
+  .content-list
+    - @posts.each do |post|
+      .content__top
+        タイトル
+        %br
+        = post.title
+      .content__title
+        コメント
+        %br
+        = post.content
+      .content__bottom
+        投稿者
+        = post.user.nickname
+        %br
+        = post.created_at
+.footer-index
