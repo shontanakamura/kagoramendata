@@ -11,19 +11,11 @@ $(function(){
       });
   });
   
-
-
-
   $('.menu__list').on('mouseover', function(){
     $('.menu__list').css('color', '#ecb000');
   }).mouseout(function() {
     $('.menu__list').css('color', 'red');
   });
-
-
-
-
-  
 
 });
 

@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# kagoramen DB設計
 
-Things you may want to cover:
+## usersテーブル
 
-* Ruby version
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+|user_id|integer|null: false|
 
-* System dependencies
+# Association
+- has_many :posts
+- has_many :comments
 
-* Configuration
+## postsテーブル
 
-* Database creation
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|content|string|null: false|
+|image|text|null: false|
+|user_id|integer|null: false|
 
-* Database initialization
+# Association
+- belongs_to :user
+- has_many :comments
 
-* How to run the test suite
+## commentsテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false|
 
-* Deployment instructions
-
-* ...
+# Association
+- belongs_to :user
+- belongs_to :post

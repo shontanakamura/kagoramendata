@@ -3,7 +3,7 @@
 @import "new";
 @import "index";
 @import "signup";
-
+@import "bootstrap"; 
 @font-face {
   font-family: "GenJyuuGothic-Monospace-Heavy.ttf";
   src: url('assets/GenJyuuGothic-Monospace-Heavy.ttf') format("truetype");
@@ -17,3 +17,4 @@ h1{
   color:gray;
   font-family: "hoge";
 }
+

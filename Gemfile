@@ -68,3 +68,4 @@ gem 'devise'
 gem 'haml-rails'
 gem 'jquery-rails', '4.3.1'
 gem 'bootstrap', '~> 4.3.1'
+
